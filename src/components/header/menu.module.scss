@@ -1,0 +1,153 @@
+
+
+
+.menu {
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.cartIcon {
+    position: relative;
+
+    svg {
+        path {
+            fill: #998E78;
+        }
+    }
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #998E78;
+        color: #fff;
+        font-size: 12px;
+    }
+}
+
+
+.footer {
+    
+    ul {
+        
+        a {
+            color: #fff;
+            border-bottom: 1px solid #998E78 ;
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+                transition: 0.5s;
+            }
+
+            &.activeLink {
+
+                border-bottom: 1px solid #fff ;
+            }
+        }
+        
+    }
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+@media(max-width: 991px) {
+    .phone {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .footer {
+        display: none;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        visibility: hidden;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    
+    .visabitily {
+        visibility: inherit !important;
+        opacity: 1 !important;
+      
+        ul {
+          transform: translateX(0) !important;
+      
+        }
+      
+    }
+
+    .menu {
+
+        .burgerMenu {
+            font-size: 24px;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+
+        ul {
+            align-items: normal;
+           position: absolute;
+           top: 0;
+           right: 0;
+           background: #fff;
+           box-shadow: -10px 4px 24px 0px rgba(0, 0, 0, 0.1);
+           width: 385px;
+           width: 50%;
+           height: 100%;
+           padding: 30px;
+           display: flex;
+           flex-direction: column;
+           transform: translateX(100%);
+           transition: 0.3s;
+           visibility: hidden;
+           opacity: 0;
+
+           li a {
+            font-size: 20px;
+            text-align: start;
+           }
+        }
+
+        .cartIcon {
+            span {
+                left: 55px;
+                right: auto;
+            }
+        }
+
+        .burgerMenu {
+            display: block;
+        }
+    }
+
+}
+
+@media(max-width: 575px) {
+    .menu ul {
+        width: 75%;
+    }
+
+}

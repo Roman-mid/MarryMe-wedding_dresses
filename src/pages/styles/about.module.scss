@@ -1,0 +1,96 @@
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    .img {
+        width: 440px;
+        border-radius: 10px;
+        border: 1px solid #998E78;
+        overflow: hidden;
+    }
+
+    .text {
+        width: 540px;
+
+        h2 {
+            margin-bottom: 45px;
+            font-size: 25px;
+            line-height: 35px;
+            letter-spacing: 1px;
+        }
+
+        p:last-child {
+            margin-top: 25px;
+        }
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.merryImg {
+    background: url('../../assets/img/merry.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 300px;
+    display: none;
+}
+
+@media(max-width: 1199px) {
+    .content {
+        .text {
+            width: 450px;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+
+    .reverse {
+        margin-bottom: 0;
+    }
+    
+    .content {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .img {
+            display: none;
+        }
+
+        .text {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+
+
+    }
+
+    .merryImg {
+        display: block;
+    }
+
+}
+
+@media(max-width: 575px) {
+    .content {
+        margin-top: 25px;
+
+        .text {
+            width: 100%;
+        }
+    }
+
+    .merryImg {
+        height: 200px;
+    }
+}

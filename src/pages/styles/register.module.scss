@@ -1,0 +1,37 @@
+
+.wrap {
+    
+    form {
+        margin: 0 auto;
+    }
+}
+
+.wrapBtns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+
+    a {
+        padding: 10px 20px;
+        border: 2px solid #998E78;
+        color: #998E78;
+        transition: 0.5s;
+
+        &:hover {
+            color: #fff;
+            background: #998E78;
+        }
+        
+        &.activeLink {
+            color: #fff;
+            background: #998E78;
+        }
+    }
+
+}
+@media(max-width: 575px) {
+    .wrapBtns {
+        gap: 30px;
+    }
+}

@@ -1,0 +1,20 @@
+body {
+  /* font-family: 'Josefin Slab', sans-serif; */
+  font-family: 'Cormorant Infant', sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+
+/* Cormorant   */ 
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+

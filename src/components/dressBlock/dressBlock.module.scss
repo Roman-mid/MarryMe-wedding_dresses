@@ -1,0 +1,86 @@
+
+
+.dressBlock {
+    width: 350px;
+
+    button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        .count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:50px;
+            height: 50px;
+            background: #fff;
+            color: #998E78;
+            border: 2px solid #998E78;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.nameWrap {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    h2 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #998E78;
+    }
+
+    .dressPrice {
+        font-size: 17px;
+        color: #998E78;
+    }
+}
+.wrapImg {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    img {
+        transition: 1s;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+            transition: 1s;
+
+        }
+    }
+}
+
+@media(max-width:1199px) {
+    .dressBlock {
+        width: 300px;
+    }
+}
+
+@media(max-width: 991px) {
+    .dressBlock {
+        width: 350px;
+    }
+}
+
+@media(max-width: 575px) {
+    .dressBlock {
+        max-width: 350px;
+        width: 100%;
+    }
+}

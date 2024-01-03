@@ -1,0 +1,186 @@
+
+
+.overflow {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    .wrap {
+        display: flex;
+        position: relative;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .wrapImg {
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        border: 1px solid #998E78;
+        height: 650px;
+    }
+
+    .galary {
+        height: 100%;
+        width: 120px;
+        cursor: pointer;
+        overflow: hidden;
+        border-left: 1px solid #998E78;
+
+        img {
+            height: 34%;
+
+            &:nth-child(2) {
+                border-top: 1px solid #998E78;
+                border-bottom: 1px solid #998E78;
+            }
+        }
+
+        .activeImg {
+            filter: brightness(40%)
+        }
+    }
+
+    .dressInfo {
+        width: 350px;
+        padding: 30px 0;
+        color: #998E78;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        h2 {
+            font-size: 40px;
+            line-height: 45px;
+            font-weight: 500;
+            color: #998E78;
+        }
+
+        .price {
+            font-size: 25px;
+            margin: 30px 0;
+        }
+
+        .bescription {
+            margin-bottom: 30px;
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .size {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #998E78;
+        color: #998E78;
+        transition: 0.3s;
+
+        &:hover {
+            background: #998E78;
+            color: #fff;
+        }
+    }
+    .activeSize {
+        background: #998E78;
+        color: #fff;
+    }
+
+    .closeInfo {
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+
+@media(max-width: 991px) {
+    .overflow {
+        .wrap {
+            gap: 40px;
+        }
+
+        .wrapImg {
+            height: 550px;
+        }
+
+        .img {
+            width: 300px;
+        }
+
+        .galary {
+            width: 100px;
+        }
+
+        .dressInfo {
+            width: 300px;
+            padding: 0;
+            .price {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .overflow {
+        overflow: auto;
+        padding: 40px 0;
+        align-items: start;
+
+        .wrap {
+            flex-direction: column;
+        }
+
+        .closeInfo {
+            right: -50px;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .overflow {
+        padding-top: 60px;
+
+        .closeInfo {
+            right: 10px;
+            top: -35px;
+        }
+
+        .wrapImg {
+            flex-direction: column;
+            height: 600px;
+        }
+        .galary {
+            display: flex;
+            height: 100%;
+            width: 300px;
+            border: none;
+
+            img {
+                height: 100%;
+                border-top: 1px solid #998E78;
+
+                &:nth-child(2) {
+                border-right: 1px solid #998E78;
+                border-left: 1px solid #998E78;
+                }
+            }
+        }
+    }
+}

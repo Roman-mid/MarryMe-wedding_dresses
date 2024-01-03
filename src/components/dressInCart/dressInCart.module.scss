@@ -1,0 +1,121 @@
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid #998E78;
+
+    .name {
+        
+        div {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+    }
+
+    p {
+        width: 100px;
+        text-align: center;
+    }
+
+    b {
+        display: none;
+    }
+
+    span {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        transition: 0.5s;
+
+        &:hover {
+            border: 1px solid red;
+            color: red;
+        }
+    }
+
+    .count {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            width: auto;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            transition: 0.5s;
+
+            &:disabled {
+                cursor: auto;
+                opacity: 0.3;
+
+                &:hover {
+                    border-color: #fff;
+                }
+            }
+
+            path {
+                transition: 0.5s;
+            }
+
+            &:hover {
+                border: 1px solid #998E78;
+                border-radius: 50%;
+                
+                path {
+                    fill: #998E78;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .wrap {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+
+        p {
+          color: #998E78;
+          display: flex;
+          align-items: center;
+          text-align: end;
+          justify-content: space-between;
+          width: 200px;
+        }
+        .count {
+            width: 200px;
+        }
+
+        b {
+          display: block;
+          color: #000;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(115px, -100px);
+        }
+    }
+}

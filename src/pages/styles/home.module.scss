@@ -1,0 +1,264 @@
+
+.sectionOffer {
+    padding-top: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer {
+    width: 650px;
+
+    p {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 45px 0;
+    }
+}
+
+.videoWrap {
+    width: 380px;
+    height: 675px;
+    position: relative;
+}
+
+.openShop {
+    transition: 0.5s;
+    border: 2px solid #998E78;
+    background: none;
+    color: #998E78;
+
+
+    &:hover {
+        background: #998E78;
+        color: #fff;
+    }
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    line-height: 44px;
+}
+
+.itemsWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.credoWrap {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    div {
+        width: 350px;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 35px;
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.sliderWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .slider {
+        width: 700px;
+        height: 400px;
+        border: 1px solid #998E78;
+        animation: anumation infinite 20s alternate;
+    }
+
+    .text {
+        width: 255px;
+
+        h3 {
+            font-size: 25px;
+        }
+
+        p {
+
+            &:first-of-type {
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+        }
+        
+        a {
+            margin-top: 30px;
+            display: block;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: normal;
+            
+        }
+
+    }
+
+    @keyframes anumation {
+        0%, 10% {
+            background: url('../../assets/img/slide4.jpeg') no-repeat center center / cover;
+        }
+        15%, 35%{
+            background: url('../../assets/img/slide2.jpeg')  no-repeat center center / cover;
+        }
+        
+        40%, 55% {
+            background: url('../../assets/img/slide3.jpeg')  no-repeat center center / cover;
+        }
+        60%, 85% {
+            background: url('../../assets/img/slide5.jpeg')  no-repeat center center / cover;
+        }
+        90%, 100% {
+            background: url('../../assets/img/slide6.jpeg')  no-repeat center center / cover;
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    .credoWrap {
+        div {
+            width: 300px;
+        }
+    }
+
+    .sliderWrap {
+
+        .slider {
+            width: 600px;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .sectionOffer {
+        padding-top: 50px;
+    }
+
+    .sectionTitle {
+        text-align: center;
+    }
+    .videoWrap {
+        display: none;
+    }
+
+    .offer {
+        width: 100%;
+        text-align: center;
+
+        a {
+            margin: 0 auto;
+        }
+    }
+
+    .itemsWrap {
+        flex-wrap: wrap;
+        column-gap: 15px;
+        row-gap: 25px;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .credoWrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        div {
+            width: 70%;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+            }
+            h3 {
+                margin-bottom: 15px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .sliderWrap {
+        flex-direction: column;
+        gap: 50px;
+        
+        .slider {
+            width: 100%;
+        }
+
+        .text {
+            width: 70%;
+            text-align: center;
+        }
+
+        a {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .offer {
+        p {
+            margin: 25px 0;
+        }
+    }
+    
+    .sectionTitle {
+        margin-bottom: 20px;
+    }
+
+    .itemsWrap {
+        row-gap: 40px;
+    }
+}
+
+@media(max-width: 575px) {
+
+    h1,
+    .sectionTitle {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .credoWrap {
+
+        div {
+            width: 90%;
+        }
+    }
+
+    .sliderWrap {
+        .slider {
+            height: 250px;
+        }
+        .text {
+            width: 100%;
+        }
+    }
+}

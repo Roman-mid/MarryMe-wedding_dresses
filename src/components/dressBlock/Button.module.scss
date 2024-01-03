@@ -1,0 +1,30 @@
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #998E78;
+    color: #fff;
+    border: 2px solid #998E78;
+    transition: 0.5s;
+    padding: 2px;
+
+    &:hover {
+        background: #fff;
+        color: #998E78;
+    }
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50px;
+    height: 100%;
+    background: #fff;
+    color: #998E78;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

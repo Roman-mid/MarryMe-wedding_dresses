@@ -1,0 +1,29 @@
+.wrapBtns {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 50px;
+
+    a {
+        border: none;
+        padding: 0 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+
+        &:hover {
+            background: none;
+            color: #998E78;
+        }
+    }
+
+    .activeLink {
+        font-weight: 500;
+        border-bottom: 2px solid #998E78;
+    }
+}
+
+@media(max-width: 767px) {
+    .wrapBtns {
+        margin: 25px 0;
+    }
+}
